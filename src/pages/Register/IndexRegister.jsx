@@ -10,6 +10,7 @@ import {
   AvatarGroup,
   Avatar,
 } from "@chakra-ui/react";
+import Register from "./Register";
 
 export default function IndexRegister() {
   return (
@@ -40,27 +41,39 @@ export default function IndexRegister() {
           maxW="55vh"
           borderRadius="10px"
           bg="whiteAlpha.900"
-        ></Box>
-        <HStack fontWeight="light" color="gray.300">
-          <Text>Made with 💜 by</Text>
-          <AvatarGroup gap="0" spaceX="-2" size="xs">
-            <Avatar.Root>
-              <Avatar.Fallback name="Thales" />
-              <Avatar.Image src="src\assets\Thales.jpg" />
-            </Avatar.Root>
-
-            <Avatar.Root>
-              <Avatar.Fallback name="Filipe" />
-              <Avatar.Image src="src\assets\Filipe.png" />
-            </Avatar.Root>
-
-            <Avatar.Root>
-              <Avatar.Fallback name="Thomaz" />
-              <Avatar.Image src="src\assets\Thomaz.png" />
-            </Avatar.Root>
-          </AvatarGroup>
-        </HStack>
+        >
+          <Register />
+        </Box>
       </VStack>
+      <HStack
+        position="fixed"
+        bottom="0"
+        left="4"
+        width="100%"
+        maxW="400px"
+        color="gray.100"
+        textAlign="center"
+        py={3}
+        fontWeight="extralight"
+      >
+        <Text>Made with 💜 by</Text>
+        <AvatarGroup gap="0" spaceX="-2" size="2xs">
+          <Avatar.Root>
+            <Avatar.Fallback name="Thales" />
+            <Avatar.Image src="src\assets\Thales.jpg" />
+          </Avatar.Root>
+
+          <Avatar.Root>
+            <Avatar.Fallback name="Filipe" />
+            <Avatar.Image src="src\assets\Filipe.png" />
+          </Avatar.Root>
+
+          <Avatar.Root>
+            <Avatar.Fallback name="Thomaz" />
+            <Avatar.Image src="src\assets\Thomaz.png" />
+          </Avatar.Root>
+        </AvatarGroup>
+      </HStack>
     </Box>
   );
 }
