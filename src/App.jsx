@@ -7,6 +7,7 @@ function App() {
     <Box
       bgGradient="to-tl"
       gradientFrom="#3c0a7b"
+      gradientVia="#3c0780, #4c0d9f"
       gradientTo="#8345d4"
       minH="100vh"
       display="flex"

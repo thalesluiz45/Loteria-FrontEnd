@@ -8,29 +8,31 @@ export default function SwitchAuth() {
     <Box>
       <ButtonGroup
         isAttached
-        bg="purple.500"
+        bg="#8345d4"
         borderRadius="full"
-        p="4px"
-        w="410px"
-        h="60px"
+        p="0.6vh"
+        w="55vh"
+        h="9.3vh"
       >
         <Button
           flex="1"
-          bg={active === "cadastro" ? "white" : "purple.300"}
+          bg={active === "cadastro" ? "whiteAlpha.900" : "purple.300"}
           color={active === "cadastro" ? "black" : "white"}
           borderRadius="full"
           onClick={() => setActive("cadastro")}
-          h="50px"
+          h="8vh"
+          fontSize="lg"
         >
           Cadastro
         </Button>
         <Button
           flex="1"
-          bg={active === "login" ? "white" : "purple.300"}
+          bg={active === "login" ? "whiteAlpha.900" : "purple.300"}
           color={active === "login" ? "black" : "white"}
           borderRadius="full"
           onClick={() => setActive("login")}
-          h="50px"
+          h="8vh"
+          fontSize="lg"
         >
           Login
         </Button>
