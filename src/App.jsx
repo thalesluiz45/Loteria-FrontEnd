@@ -15,6 +15,7 @@ import {
   Routes,
   Route,
   useLocation,
+  Link,
 } from "react-router-dom";
 import Login from "./pages/Register/Login";
 import Register from "./pages/Register/Register";
@@ -85,17 +86,17 @@ function App() {
 
               <HStack
                 position="fixed"
-                bottom="0"
-                width="100%"
+                left="22vh"
+                bottom="1"
                 maxW="400px"
-                color="gray.100"
+                color="gray.200"
                 textAlign="center"
                 py="5"
-                px="20"
                 fontWeight="extralight"
               >
-                <Text>Made with 💜 by</Text>
-                <AvatarGroup gap="0" spaceX="-2" size="2xs">
+                <Text>Made by</Text>
+
+                <AvatarGroup gap="0" spaceX="-1" size="2xs">
                   <Avatar.Root>
                     <Avatar.Fallback name="Thales" />
                     <Avatar.Image src="src/assets/Thales.jpg" />
