@@ -4,7 +4,11 @@ import { HiOutlineMail } from "react-icons/hi";
 const InputEmail = () => {
   return (
     <InputGroup startElement={<HiOutlineMail />}>
-      <Input color="black" placeholder="Email" />
+      <Input
+        color="black"
+        placeholder="Email"
+        css={{ "--focus-color": "#8345d4" }}
+      />
     </InputGroup>
   );
 };

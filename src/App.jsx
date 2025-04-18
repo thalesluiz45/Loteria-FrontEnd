@@ -1,57 +1,10 @@
-import {
-  Box,
-  Flex,
-  Image,
-  Heading,
-  Avatar,
-  AvatarGroup,
-  HStack,
-  Text,
-} from "@chakra-ui/react";
-import { Fade } from "@chakra-ui/transition";
+import { Box, Flex } from "@chakra-ui/react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-  Link,
-} from "react-router-dom";
-import Login from "./pages/Register/Login";
-import Register from "./pages/Register/Register";
 import ConnectingDots from "./components/Dots/ConnectingDots";
-import { AnimatePresence } from "framer-motion";
+import AnimatedRoutes from "./routes/Routes";
+import SidePanel from "./components/Layout/SidePanel";
 
-function AnimatedRoutes() {
-  const location = useLocation();
-
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <Fade in>
-              <Box>
-                <Login />
-              </Box>
-            </Fade>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <Fade in>
-              <Box>
-                <Register />
-              </Box>
-            </Fade>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
-  );
-}
 function App() {
   return (
     <Router>
@@ -64,57 +17,7 @@ function App() {
         position="relative"
       >
         <Flex w="100%" h="100vh">
-          <Box
-            w="33.33%"
-            p="4"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            zIndex={1}
-            boxShadow="xl"
-          >
-            <Flex gap="2">
-              <Image
-                src="src/assets/LotoIcon.png"
-                boxSize="80px"
-                borderRadius="full"
-                fit="cover"
-              />
-              <Heading size="7xl" fontFamily="League Spartan" fontWeight="bold">
-                LotoCheck
-              </Heading>
-
-              <HStack
-                position="fixed"
-                left="22vh"
-                bottom="1"
-                maxW="400px"
-                color="gray.200"
-                textAlign="center"
-                py="5"
-                fontWeight="extralight"
-              >
-                <Text>Made by</Text>
-
-                <AvatarGroup gap="0" spaceX="-1" size="2xs">
-                  <Avatar.Root>
-                    <Avatar.Fallback name="Thales" />
-                    <Avatar.Image src="src/assets/Thales.jpg" />
-                  </Avatar.Root>
-
-                  <Avatar.Root>
-                    <Avatar.Fallback name="Filipe" />
-                    <Avatar.Image src="src/assets/Filipe.png" />
-                  </Avatar.Root>
-
-                  <Avatar.Root>
-                    <Avatar.Fallback name="Thomaz" />
-                    <Avatar.Image src="src/assets/Thomaz.png" />
-                  </Avatar.Root>
-                </AvatarGroup>
-              </HStack>
-            </Flex>
-          </Box>
+          <SidePanel />
 
           <Box
             w="66.66%"
@@ -126,14 +29,7 @@ function App() {
             position="relative"
             overflow="hidden"
           >
-            <Box
-              position="absolute"
-              top={0}
-              left={0}
-              right={0}
-              bottom={0}
-              zIndex={0}
-            >
+            <Box position="absolute" inset={0} zIndex={0}>
               <ConnectingDots />
             </Box>
 

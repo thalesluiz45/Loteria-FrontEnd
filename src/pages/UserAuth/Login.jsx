@@ -1,5 +1,3 @@
-import InputEmail from "@/components/Form/InputEmail";
-import InputPassword from "@/components/Form/InputPassword";
 import {
   Box,
   Heading,
@@ -8,9 +6,11 @@ import {
   Button,
   Link,
   Text,
+  Stack,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-
+import InputEmail from "@/components/Form/InputEmail";
+import InputPassword from "@/components/Form/InputPassword";
 export default function Login(onSwitch) {
   return (
     <Box padding="3" bg="white" borderRadius="xl" boxShadow="sm" minW="55vh">
@@ -29,18 +29,30 @@ export default function Login(onSwitch) {
 
         <InputPassword placeholder="Insira a senha" />
 
-        <Button
-          variant="solid"
-          bgColor="#07803c"
-          color="white"
-          size="xl"
-          w="full"
-        >
-          Entrar
-        </Button>
+        <Stack w="full">
+          <Button
+            variant="solid"
+            bgColor="#07803c"
+            color="white"
+            size="xl"
+            w="full"
+          >
+            Entrar
+          </Button>
+          <Text color="gray.600" fontSize="sm">
+            <Link as={RouterLink} to="/forgot" color="teal.500">
+              Esqueci minha senha.
+            </Link>
+          </Text>
+        </Stack>
         <Text color="gray.600">
           Não possui conta?{" "}
-          <Link as={RouterLink} to="/register" color="teal.500">
+          <Link
+            as={RouterLink}
+            to="/register"
+            color="teal.500"
+            variant="underline"
+          >
             Clique aqui
           </Link>{" "}
           para se registrar.

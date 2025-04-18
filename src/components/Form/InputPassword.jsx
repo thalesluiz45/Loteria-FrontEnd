@@ -1,5 +1,8 @@
 import { InputGroup } from "@chakra-ui/react";
-import { PasswordInput } from "@/components/ui/password-input";
+import {
+  PasswordInput,
+  PasswordStrengthMeter,
+} from "@/components/ui/password-input";
 import { RiLockPasswordLine } from "react-icons/ri";
 
 const InputPassword = ({ placeholder }) => {
@@ -10,6 +13,7 @@ const InputPassword = ({ placeholder }) => {
         placeholder={placeholder || ""}
         size="md"
         variant="outline"
+        css={{ "--focus-color": "#8345d4" }}
       />
     </InputGroup>
   );
