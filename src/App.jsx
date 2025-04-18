@@ -8,11 +8,49 @@ import {
   HStack,
   Text,
 } from "@chakra-ui/react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Fade } from "@chakra-ui/transition";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Login from "./pages/Register/Login";
 import Register from "./pages/Register/Register";
 import ConnectingDots from "./components/Dots/ConnectingDots";
+import { AnimatePresence } from "framer-motion";
 
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <Fade in>
+              <Box>
+                <Login />
+              </Box>
+            </Fade>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Fade in>
+              <Box>
+                <Register />
+              </Box>
+            </Fade>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 function App() {
   return (
     <Router>
@@ -99,10 +137,7 @@ function App() {
             </Box>
 
             <Box zIndex={1}>
-              <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-              </Routes>
+              <AnimatedRoutes />
             </Box>
           </Box>
         </Flex>
