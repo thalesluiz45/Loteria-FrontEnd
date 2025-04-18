@@ -13,7 +13,7 @@ import InputEmail from "@/components/Form/InputEmail";
 import InputPassword from "@/components/Form/InputPassword";
 export default function Login(onSwitch) {
   return (
-    <Box padding="3" bg="white" borderRadius="xl" boxShadow="sm" minW="55vh">
+    <Box padding="3" bg="white" borderRadius="xl" boxShadow="sm" minW="50vh">
       <Heading
         size="5xl"
         fontFamily="Poppins"

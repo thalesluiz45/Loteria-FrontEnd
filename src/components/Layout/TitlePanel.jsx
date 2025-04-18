@@ -28,7 +28,7 @@ const devs = [
   },
 ];
 
-const SidePanel = () => (
+const TitlePanel = () => (
   <Box
     w="33.33%"
     p="4"
@@ -78,4 +78,4 @@ const SidePanel = () => (
   </Box>
 );
 
-export default SidePanel;
+export default TitlePanel;
