@@ -14,33 +14,32 @@ import { LuUser } from "react-icons/lu";
 
 export default function Register() {
   return (
-    <Box>
+    <Box padding="2">
       <Heading
-        paddingTop="3"
         size="6xl"
         fontFamily="League Spartan"
         fontWeight="bold"
         padding="0.5vh 2vh"
-        color="gray.500"
+        color="gray.600"
       >
         Cadastro
       </Heading>
       <Separator />
       <VStack p="10px">
         <Field.Root>
-          <Field.Label color="gray.500">Nome Completo</Field.Label>
+          <Field.Label color="gray.600">Nome Completo</Field.Label>
           <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
         </Field.Root>
         <Field.Root>
-          <Field.Label color="gray.500">Email</Field.Label>
+          <Field.Label color="gray.600">Email</Field.Label>
           <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
         </Field.Root>
         <Field.Root>
-          <Field.Label color="gray.500">Senha</Field.Label>
+          <Field.Label color="gray.600">Senha</Field.Label>
           <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
         </Field.Root>
         <Field.Root>
-          <Field.Label color="gray.500">Confirme a senha</Field.Label>
+          <Field.Label color="gray.600">Confirme a senha</Field.Label>
           <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
         </Field.Root>
         <Button

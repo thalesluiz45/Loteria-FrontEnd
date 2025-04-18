@@ -1,6 +1,6 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex, Image, Heading } from "@chakra-ui/react";
 import IndexRegister from "./pages/Register/IndexRegister";
-import Login from "./pages/Register/Login";
+import ConnectingDots from "./components/Dots/ConnectingDots";
 
 function App() {
   return (
@@ -10,12 +10,56 @@ function App() {
       gradientVia="#3c0780, #4c0d9f"
       gradientTo="#8345d4"
       minH="100vh"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
+      position="relative"
     >
-      <IndexRegister />
-      <Login />
+      <Flex w="100%" h="100vh">
+        <Box
+          w="33.33%"
+          p="4"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          zIndex={1}
+        >
+          <Flex gap={"2"}>
+            <Image
+              src="src/assets/LotoIcon.png"
+              boxSize="80px"
+              borderRadius="full"
+              fit="cover"
+            />
+            <Heading size="7xl" fontFamily="League Spartan" fontWeight="bold">
+              LotoCheck
+            </Heading>
+          </Flex>
+        </Box>
+
+        <Box
+          w="66.66%"
+          bg="gray.200"
+          p="4"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          position="relative"
+          overflow="hidden"
+        >
+          <Box
+            position="absolute"
+            top={0}
+            left={0}
+            right={0}
+            bottom={0}
+            zIndex={0}
+          >
+            <ConnectingDots />
+          </Box>
+
+          <Box zIndex={1}>
+            <IndexRegister />
+          </Box>
+        </Box>
+      </Flex>
     </Box>
   );
 }

@@ -1,39 +1,18 @@
-import SwitchAuth from "@/components/SwitchButton/SwitchButton";
 import {
   Box,
-  Heading,
   VStack,
   HStack,
   Text,
-  Image,
-  Flex,
   AvatarGroup,
   Avatar,
 } from "@chakra-ui/react";
 import Register from "./Register";
+import ConnectingDots from "@/components/Dots/ConnectingDots";
 
 export default function IndexRegister() {
   return (
-    <Box minH="100vh" display="flex" flexDirection="column" alignItems="center">
+    <Box display="flex" flexDirection="column" alignItems="center">
       <VStack gap="1.5vh" p="2vh">
-        <Flex align="center" gap={3}>
-          <Image
-            src="src\assets\LotoIcon.png"
-            boxSize="65px"
-            borderRadius="full"
-            fit="cover"
-          />
-          <Heading
-            paddingTop="3"
-            size="6xl"
-            fontFamily="League Spartan"
-            fontWeight="bold"
-          >
-            LotoCheck
-          </Heading>
-        </Flex>
-
-        <SwitchAuth />
         <Box
           color="black"
           minH="30vw"
@@ -45,6 +24,7 @@ export default function IndexRegister() {
           <Register />
         </Box>
       </VStack>
+
       <HStack
         position="fixed"
         bottom="0"
