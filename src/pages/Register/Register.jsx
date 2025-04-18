@@ -1,56 +1,54 @@
+import InputEmail from "@/components/Form/InputEmail";
+import InputName from "@/components/Form/InputName";
+import InputPassword from "@/components/Form/InputPassword";
 import {
   Box,
   Heading,
   Separator,
-  Input,
-  InputGroup,
-  HStack,
-  FieldLabel,
-  Field,
   VStack,
   Button,
+  Link,
+  Text,
 } from "@chakra-ui/react";
-import { LuUser } from "react-icons/lu";
-
-export default function Register() {
+import { Link as RouterLink } from "react-router-dom";
+export default function Register(onSwitch) {
   return (
-    <Box padding="2">
+    <Box padding="3" bg="white" borderRadius="xl" boxShadow="sm" minW="55vh">
       <Heading
-        size="6xl"
-        fontFamily="League Spartan"
+        size="5xl"
+        fontFamily="Poppins"
         fontWeight="bold"
         padding="0.5vh 2vh"
         color="gray.600"
       >
-        Cadastro
+        Registrar
       </Heading>
       <Separator />
-      <VStack p="10px">
-        <Field.Root>
-          <Field.Label color="gray.600">Nome Completo</Field.Label>
-          <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
-        </Field.Root>
-        <Field.Root>
-          <Field.Label color="gray.600">Email</Field.Label>
-          <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
-        </Field.Root>
-        <Field.Root>
-          <Field.Label color="gray.600">Senha</Field.Label>
-          <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
-        </Field.Root>
-        <Field.Root>
-          <Field.Label color="gray.600">Confirme a senha</Field.Label>
-          <Input bgColor="gray.200" border="1px solid gray" placeholder="" />
-        </Field.Root>
+      <VStack p="10px" gap="5">
+        <InputName />
+
+        <InputEmail />
+
+        <InputPassword placeholder="Insira uma senha" />
+
+        <InputPassword placeholder="Confirme a senha" />
+
         <Button
           variant="solid"
-          bgColor="teal.600"
-          color="whiteAlpha.900"
+          bgColor="#07803c"
+          color="white"
           size="xl"
           w="full"
         >
           Cadastrar
         </Button>
+
+        <Text color="gray.600">
+          Já possui conta?{" "}
+          <Link as={RouterLink} to="/" color="teal.500">
+            Faça login.
+          </Link>
+        </Text>
       </VStack>
     </Box>
   );
