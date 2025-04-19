@@ -31,6 +31,8 @@ export default function Login(onSwitch) {
 
         <Stack w="full">
           <Button
+            as={RouterLink}
+            to="/dashboard"
             variant="solid"
             bgColor="#07803c"
             color="white"
