@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { IoExitOutline } from "react-icons/io5";
+import { Link as RouterLink } from "react-router-dom";
 
 const SideDrawer = () => {
   return (
@@ -42,7 +43,13 @@ const SideDrawer = () => {
               </p>
             </Drawer.Body>
             <Drawer.Footer>
-              <IconButton size="lg" variant="subtle" colorPalette="red">
+              <IconButton
+                as={RouterLink}
+                to="/"
+                size="lg"
+                variant="subtle"
+                colorPalette="red"
+              >
                 <IoExitOutline />
               </IconButton>
             </Drawer.Footer>
