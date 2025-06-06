@@ -46,14 +46,18 @@ const TitlePanel = () => (
           borderRadius="full"
           fit="cover"
         />
-        <Heading size="7xl" fontFamily="League Spartan" fontWeight="bold">
+        <Heading
+          size="7xl"
+          fontFamily="League Spartan"
+          fontWeight="bold"
+          paddingTop="4"
+        >
           LotoCheck
         </Heading>
       </Flex>
 
       <HStack
         position="fixed"
-        left="22vh"
         bottom="1"
         maxW="400px"
         color="gray.200"

@@ -1,16 +1,14 @@
 import {
-  Button,
   IconButton,
   CloseButton,
   Drawer,
   Portal,
   Avatar,
-  Separator,
   Box,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoExitOutline } from "react-icons/io5";
-import { Link as RouterLink } from "react-router-dom";
 
 const SideDrawer = () => {
   return (

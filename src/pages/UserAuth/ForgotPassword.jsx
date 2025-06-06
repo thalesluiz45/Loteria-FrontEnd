@@ -3,12 +3,12 @@ import {
   Button,
   Heading,
   Stack,
-  Text,
   Link,
+  Text,
   Separator,
 } from "@chakra-ui/react";
-import InputEmail from "@/components/Form/InputEmail";
 import { Link as RouterLink } from "react-router-dom";
+import InputEmail from "@/components/Form/InputEmail";
 
 export default function ForgotPassword() {
   return (
@@ -23,7 +23,7 @@ export default function ForgotPassword() {
         Recuperar Senha
       </Heading>
       <Separator />
-      <Stack p="10px" gap="4" color="gray.600">
+      <Stack p="10px" gap="4" color="gray.600" w="full">
         <Text>Digite seu e-mail para recuperar sua senha:</Text>
         <InputEmail />
         <Button
@@ -35,9 +35,11 @@ export default function ForgotPassword() {
         >
           Enviar
         </Button>
-        <Link as={RouterLink} to="/" color="teal.500">
-          Voltar para login.
-        </Link>
+        <Text>
+          <Link as={RouterLink} to="/" color="teal.500">
+            Voltar para login.
+          </Link>
+        </Text>
       </Stack>
     </Box>
   );

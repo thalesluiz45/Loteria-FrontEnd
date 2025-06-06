@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const ConnectingDots = () => {
   const canvasRef = useRef(null);
@@ -31,12 +31,10 @@ const ConnectingDots = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Move and draw dots
       dots.forEach((dot) => {
         dot.x += dot.vx;
         dot.y += dot.vy;
 
-        // Bounce off walls
         if (dot.x < 0 || dot.x > canvas.width) dot.vx *= -1;
         if (dot.y < 0 || dot.y > canvas.height) dot.vy *= -1;
 
@@ -46,7 +44,6 @@ const ConnectingDots = () => {
         ctx.fill();
       });
 
-      // Draw lines between close dots
       for (let i = 0; i < dots.length; i++) {
         for (let j = i + 1; j < dots.length; j++) {
           const dx = dots[i].x - dots[j].x;

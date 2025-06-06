@@ -1,4 +1,4 @@
-import { Box, Text, Image, Flex, Heading } from "@chakra-ui/react";
+import { Box, Image, Flex, Heading } from "@chakra-ui/react";
 import SideDrawer from "../Drawer/SideDrawer";
 import { Outlet } from "react-router-dom";
 
@@ -35,6 +35,7 @@ export default function MainLayout() {
           </Heading>
         </Flex>
       </Box>
+      <Outlet />
     </Box>
   );
 }

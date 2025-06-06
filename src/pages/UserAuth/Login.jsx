@@ -41,24 +41,22 @@ export default function Login(onSwitch) {
           >
             Entrar
           </Button>
-          <Text color="gray.600" fontSize="sm">
-            <Link as={RouterLink} to="/forgot" color="teal.500">
+
+          <Text fontSize="sm">
+            <Link as={RouterLink} to="/forgot" color={"teal.500"}>
               Esqueci minha senha.
             </Link>
           </Text>
         </Stack>
-        <Text color="gray.600">
-          Não possui conta?{" "}
-          <Link
-            as={RouterLink}
-            to="/register"
-            color="teal.500"
-            variant="underline"
-          >
-            Clique aqui
-          </Link>{" "}
-          para se registrar.
-        </Text>
+        <Box>
+          <Text color="gray.600">
+            Não possui conta?{" "}
+            <Link as={RouterLink} to="/register" color={"teal.500"}>
+              Clique aqui
+            </Link>{" "}
+            para se registrar.
+          </Text>
+        </Box>
       </VStack>
     </Box>
   );

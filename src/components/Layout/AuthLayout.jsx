@@ -1,9 +1,9 @@
 import { Box, Flex } from "@chakra-ui/react";
-import TitlePanel from "./TitlePanel";
+import TitlePanel from "../TitlePanel/TitlePanel";
 import ConnectingDots from "../Dots/ConnectingDots";
 import { Outlet } from "react-router-dom";
 
-export default function AuthLayout() {
+const AuthLayout = () => {
   return (
     <Box
       bgGradient="to-tl"
@@ -37,4 +37,5 @@ export default function AuthLayout() {
       </Flex>
     </Box>
   );
-}
+};
+export default AuthLayout;

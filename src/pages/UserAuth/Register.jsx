@@ -6,8 +6,8 @@ import {
   Heading,
   Separator,
   VStack,
-  Button,
   Link,
+  Button,
   Text,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -45,7 +45,7 @@ export default function Register(onSwitch) {
 
         <Text color="gray.600">
           Já possui conta?{" "}
-          <Link as={RouterLink} to="/" color="teal.500">
+          <Link as={RouterLink} to="/" color={"teal.500"}>
             Faça login.
           </Link>
         </Text>
